@@ -27,7 +27,7 @@ jobs:
 
           trap "rm -f privatekey.pem" EXIT
 
-          ssh -o StrictHostKeyChecking=no -i privatekey.pem ${USER_NAME}@${HOST_NAME}' << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i privatekey.pem ${USER_NAME}@${HOST_NAME} << 'EOF'
             cd ~/task2
             git pull origin main
             source venv/bin/activate
